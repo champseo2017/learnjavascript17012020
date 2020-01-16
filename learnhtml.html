@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      /**
+        * * คุณสมบัติ escape() 
+        * * ความหมาย 
+        เข้ารหัสข้อความใดๆ เช่น
+        escape("Encodes special characters, *@-_+./");
+       
+        var escapestring = escape("Encodes special characters, *@-_+./");
+        console.log(escapestring);
+    
+        * * คุณสมบัติ eval() 
+        * * ความหมาย
+        คำนวณข้อความ ถ้าข้อความเป็นสมการ / รันข้อความ ถ้า ข้อความเป็นคำสั่ง เช่น 
+            eval("2+2"); ผลลัพธ์
+            eval("x=10; y=20; document.write(x*y)"); ผลลัพธ์ 200
+
+            var a = eval("2+2");
+            console.log(a);
+
+        * * คุณสมบัติ isFinite()
+        * * ความหมาย
+        ตรวจสอบค่าในตัวแปรเป็นค่าจำกัดหรือไม่ ถ้าจำกัดจะคืนค่า true, ถ้าอันันต์หรือไม่ใช้ตัวเลขจะคืนค่า false
+        isFinite("Hello"); ผลลัพธ์ false
+        isFinite("5006"); ผลลัพธ์ true
+        var a = isFinite("5006");
+        console.log(a);
+        var b = isFinite("Hello"):
+        console.log(b):
+
+        * * ฟังก์ชัน isNaN()
+        * * ความหมาย
+        ตรวจสอบค่าในตัวแปรเป็นค่า "Not-a-Number" หรือไม่ ถ้าเป็น NaN จะตชคืนค่า true, ถ้าไม่เป็น NaN จะคืนค่า false is
+        NaN("Hello"); ผลลัพธ์ true
+        isNaN("5006"); ผลลัพธ์ false
+         var a = isNaN("Hello"); 
+          console.log(a);
+          var b = isNaN("5006");
+        console.log(b);
+
+         * * ฟังก์ชัน Number()
+        * * ความหมาย
+            แปลงออบเจ็กต์ใดๆ เป็นตัวเลข
+            var a = "123"
+            b = Number(a);
+            console.log(b);
+
+          * * ฟังก์ชัน parseFloat()
+            * * ความหมาย
+            แปลงข้อความเป็นตัวเลขแบบจำนวนทศนิยม
+             var a = 12.345678910
+            var b = parseFloat(a).toFixed(2);
+            console.log(b);
+
+         * * ฟังก์ชัน parseInt()
+            * * ความหมาย
+            แปลงข้อความเป็นตัวเลขแบบจำนวนเต็ม
+
+         * * ฟังก์ชัน String()
+            * * ความหมาย
+            แปลงออบเจ็กต์ใดๆ เป็นข้อความ
+
+         * * ฟังก์ชัน unescape()
+            * * ความหมาย
+            ถอดรหัสข้อความใดๆ
+
+            * * คุณสมบัติและฟังก์ชันสำหรับอาร์เรย์
+            * * เป็นคุณสมบัติและฟังก์ชันที่ใช้กับอาร์เรย์ มีรายละเอียดดังนี้
+            
+            * * คุณสมบัติ length
+            * * ความหมาย
+            กำหนดหรือแสดงจำนวนสมาชิกในอาร์เรย์
+            กำหนดให้
+            var parents = ["Jani", "Tove"];
+            var children = ["Cecilie", "Lone"];
+            var fruite = ["Banana", "Ornnge", "Apple", "Mango"];
+
+            var parents = ["Jani", "Tove"];
+             console.log(parents.length);
+
+            * * คุณสมบัติ concat()
+            * * ความหมาย
+            รวมหลายอาร์เรย์เป็นอาร์เรย์เดียว เช่น
+            family = parents.concat(children); document.write(family);
+            ผลลัพธ์ Jani, Tove, Cecilie, Lone;
+             var parents = ["Jani", "Tove"];
+            var children = ["Cecilie", "Lone"];
+            var family = parents.concat(children);
+            document.write(family);
+
+            
+            * * คุณสมบัติ join()
+            * * ความหมาย
+            รวมสมาชิกในอาร์เรย์เป็นข้อความ เช่น
+            document.write(fruits.join("+"));
+            ผลลัพธ์ Banana + Orange + Apple + Mango
+            var fruite = ["Banana", "Ornnge", "Apple", "Mango"];
+            document.write(fruite.join("+"));
+
+
+             * * คุณสมบัติ pop();
+            * * ความหมาย
+            ลบสมาชิกตัวท้ายในอาร์เรย์ เช่น
+            fruits.pop(); 
+            document.write(fruits);
+            ผลลัพธ์ Banana, Orange, Apple
+
+            var fruite = ["Banana", "Ornnge", "Apple", "Mango"];
+            fruite.pop();
+            document.write(fruite);
+
+
+             * * คุณสมบัติ push();
+            * * ความหมาย
+            เพิ่มสมาชิกต่อท้ายในอาร์เรย์ เช่น
+            fruite.push("Cherry");
+            document.write(fruits);
+            ผลลัพธ์ Banana, Orange, Apple, Mango, Cherry
+            var fruite = ["Banana", "Orange", "Apple", "Mango"];
+            fruite.push("Cherry");
+            document.write(fruite);
+
+             * * ฟังก์ชัน reverse();
+            * * ความหมาย
+                กลับสมาชิกในอาร์เรย์ เช่น
+                fruits.reverse();
+                document.write(fruits);
+                ผลลัพธ์ Mango, Apple, Orange, Banana
+
+                var fruite = ["Banana", "Orange", "Apple", "Mango"];
+                fruite.reverse();
+                document.write(fruite);
+
+
+            * * ฟังก์ชัน shift();
+            * * ความหมาย
+                ลบสมาชิกตัวแรกในอาร์เรย์ เช่น
+                fruits.shift(); 
+                document.write(fruits);
+                ผลลัพธ์ Orange, Apple, Mango
+                var fruite = ["Banana", "Orange", "Apple", "Mango"];
+                fruite.shift();
+                document.write(fruite);
+
+            * * ฟังก์ชัน slice()
+            * * ความหมาย
+                ดึงบางส่วนของอาร์เรย์มาสร้างเป็นอาร์เรย์ใหม่ เช่น
+                f = fruits.slice(1, 3);
+                document.write(f);
+                ผลลัพธ์ Orange, Apple
+                 var fruite = ["Banana", "Orange", "Apple", "Mango"];
+                var f = fruite.slice(1, 3);
+                console.log(f);
+
+
+                * * ฟังก์ชัน sort()
+                * * ความหมาย
+                เรีนงสมาขิกในอาร์เรย์ เช่น
+                fruits.sort();
+                document.write(fruits);
+                ผลลัพธ์ Apple, Banana, Mango, Oraange
+                var fruite = ["Banana", "Orange", "Apple", "Mango"];
+                fruite.sort();
+                document.write(fruite);
+
+                * * ฟังก์ชัน splice()
+                * * ความหมาย
+                เพิ่ม / ลบสมาชิกในอาร์เรย์ มีรูปแบบดังนี้
+                array.splice(ตำแหน่ง, จำนวนสมาชิกที่จะลบ, สมาชิกใหม่1, สมาชิกใหม่2, ...., สมาชิกใหม่ xxxx);
+                เช่น
+                fruits.splice(2, 0, "Lemon");
+                document.write(fruits);
+                ผลลัพธ์ Banana, Orange, Lemon, Apple, Mango
+
+                var fruite = ["Banana", "Orange", "Apple", "Mango"];
+        fruite.splice(2, 0, "Lemon");
+        document.write(fruite);
+
+
+         
+
+       */
+        
+        
+
+       
+     
+        
+
+        
+        
+            
+        
+       
+        
+       
+       
+        
+       
+
+      
+      
+    </script>
+  </body>
+</html>
