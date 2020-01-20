@@ -186,8 +186,219 @@
 
 
          
+         คุณสมบัติและฟังก์ชันสำหรับวันเวลา
+         เป็นฟังก์ชันที่ใช้กับวันเวลา มีรายละเอียดดังนี้
+         ฟังก์ชัน
+
+         ความหมาย
+         กำหนดให้
+         var d = new Date();
+
+         ฟังก์ชัน
+         getDate()
+         ความหมาย
+         แสดงวันที่ (1 ถึง 31)
+         var t = new Date();
+       console.log(t.getDate());
+
+       ฟังก์ชัน
+       getDay();
+       ความหมาย
+       แสดงวัน (0 ถึง 6)
+       var t = new Date();
+       console.log(t.getDay());
+
+       ฟังก์ชัน
+       getFullYear()
+       ความหมาย
+       แสดงปี (4 หลัก)
+      var t = new Date();
+       console.log(t.getFullYear());
+
+       ฟังก์ชัน
+       getHours()
+       ความหมาย
+       แสดงชั่วโมง (0 ถึง 23)
+       var t = new Date();
+       console.log(t.getHours());
+
+       ฟังก์ชัน
+       getMilliseconds();
+       ความหมาย
+       แสดงมิลลิวินาที (0 ถึง 999)
+       var t = new Date();
+       console.log(t.getMilliseconds());
+
+       ฟังก์ชัน
+       getMinutes();
+       ความหมาย
+       แสดงนาที (0 ถึง 59)
+       var t = new Date();
+       console.log(t.getMinutes());
+
+       ฟังก์ชัน
+       getMonth
+       ความหมาย
+       แสดงเดือน (0 ถึง 11)
+       var t = new Date();
+       console.log(t.getMonth());
+
+       ฟังก์ชัน
+       getSeconds();
+       ความหมาย
+       แสดงวินาที (0 ถึง 59)
+       document.write(d.getMonth() + "/" + d.getFullYear());
+       ผลลัพธ์ 4/20xx
+
+       document.write(d.getHours() + ":" + d.getMinutes());
+       ผลลัพธ์ 15:18
+       var d = new Date();
+       document.write(d.getMonth() + "/" + d.getFullYear());
+       document.write(d.getHours() + ":" + d.getMinutes());
+
+       ฟังก์ชัน
+       getTime();
+       ความหมาย
+       แสดงจำนวนวินาทีที่ผ่านมา นับจากเที่ยงคืน Jan 1, 1970
+       var d = new Date();
+       console.log(d.getTime());
+
+       ฟังก์ชัน 
+       getTimezoneOffset();
+       ความหมาย
+       แสดงส่วนต่างเวลา GMT หรือไทม์โซน
+       document.write(d.getTime()); 
+       document.write(d.getTimezoeOffset());
+       var d = new Date();
+       document.write(d.getTime());
+       document.write(d.getTimezoneOffset());
+
+       ฟังก์ชัน
+       getUTCDate();
+       ความหมาย
+       แสดงวันที่ UTC (1 ถึง 3)
+       var d = new Date();
+       console.log(d.getUTCDate());
+
+       ฟังก์ชัน
+       getUTCDay();
+       ความหมาย
+       แสดงวันที่ UTC (0 ถึง 6)
+       var d = new Date();
+      console.log(d.getUTCDay());
+
+      ฟังก์ชัน
+      getUTCFullYear()
+      ความหมาย
+      แสดงปี UTC (4 หลัก)
+      var d = new Date();
+       console.log(d.getUTCFullYear());
+
+       ฟังก์ชัน
+       getUTCHours();
+       ความหมาย
+       แสดงชั่วโมง UTC (0 ถึง 23)
+        var d = new Date();
+       console.log(d.getUTCHours());
+
+       ฟังก์ชัน
+       getUTCMilliseconds();
+       ความหมาย
+       แสดงมิลลิวินาที UTC (0 ถึง 999)
+       var d = new Date();
+       console.log(d.getUTCMilliseconds());
+
+
+       ฟังก์ชัน
+       getUTCMinutes()
+       ความหมาย
+       แสดงนาที UTC (0 ถึง 59)
+        var d = new Date();
+       console.log(d.getUTCMinutes());
+
+       ฟังก์ชัน
+       getUTCMonth()
+       ความหมาย
+       แสดงเดือน UTC (0 ถึง 11)
+       var d = new Date();
+       console.log(d.getUTCMonth());
+
+       ฟังก์ชัน
+       getUTCSeconds();
+       ความหมาย
+       แสดงวินาที UTC (0 ถึง 59)
+       UTC(Coordinted Universal Time) เป็นเวลาสากลเชิงพิกัดที่ตำแหน่งลองจิจุด 0 องศา เป็นเวลาที่ตรงกับทุกจุดทั่วโลก
+
+       ฟังก์ชัน
+       getYear()
+       ความหมาย
+       เลิกใช้ให้ใช้ฟังก์ชัน getFullYear() แทน
+
+       ฟังก์ชัน
+       parse()
+       ความหมาย
+       แปลงข้อความเป็นจำนวนวินาทีที่ผ่านมา นับจากเที่ยงคืน
+       Jan 1, 1970
+       document.write(Date.parse("Jan 2 00:00:00 UTC+0700 1970"));
+       ผลลัพธ์ 61200000
+
+       ฟังก์ชัน
+       setDate()
+        ความหมาย
+        กำหนดวันที่ (1 ถึง 31)
+
+        ฟังก์ชัน
+        setFullYear()
+        ความหมาย
+        กำหนดปี (4 หลัก)
+
+        ฟังก์ชัน
+        setHours()
+        ความหมาย
+        กำหนดชั่วโมง (0 ถึง 23)
+
+        ฟังก์ชัน
+        setMilliseconds()
+        ความหมาย
+        กำหนดมิลลิวินาที (0 ถึง 999)
+
+        ฟังก์ชัน
+        setMinutes()
+        ความหมาย
+        กำหนดนาที (0 ถึง 59)
+
+        ฟังก์ชัน
+        setMonth()
+        ความหมาย
+        กำหนดเดือน (0 ถึง 11)
+
+        ฟังก์ชัน
+        setSeconds()
+        ความหมาย
+        กำหนดวินาที (0 ถึง 59)
+
+
+        
 
        */
+       
+      
+       
+      
+       
+       
+       
+       
+       
+       
+
+       
+       
+       
+       
+       
+      
+       
         
         
 
